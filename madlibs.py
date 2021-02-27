@@ -28,6 +28,29 @@ def say_hello():
 
     return render_template("hello.html")
 
+@app.route('/game')
+def show_madlib_form():
+    """Shows madlib form."""
+
+    response = request.args.get("game")
+
+    if response == "No":
+        return render_template("goodbye.html")
+    
+    else:
+        return render_template("game.html")
+
+@app.route('/madlib')
+def show_madlib():
+    """Returns user responses as a madlib."""
+
+    person = request.args.get("person")
+    color = request.args.get("color")
+    noun = request.args.get("noun")
+    adjective = request.args.get("adjective")
+
+    return render_template("madlib.html",
+                            )
 
 @app.route('/greet')
 def greet_person():
