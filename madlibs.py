@@ -44,16 +44,22 @@ def show_madlib_form():
 def show_madlib():
     """Returns user responses as a madlib."""
 
+    # madlibs = ["madlib.html", "madlib-2.html"]
+
     person = request.args.get("person")
-    color = request.args.get("color")
+    colors = request.args.get("colors")
     noun = request.args.get("noun")
     adjective = request.args.get("adjective")
 
+    color_list = request.args.getlist("colors")
+    print(color_list)
+
     return render_template("madlib.html",
                             person=person,
-                            color=color,
+                            colors=colors,
                             noun=noun,
-                            adjective=adjective)
+                            adjective=adjective,
+                            color_list=color_list)
 
 @app.route('/greet')
 def greet_person():
