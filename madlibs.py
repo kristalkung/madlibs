@@ -50,7 +50,10 @@ def show_madlib():
     adjective = request.args.get("adjective")
 
     return render_template("madlib.html",
-                            )
+                            person=person,
+                            color=color,
+                            noun=noun,
+                            adjective=adjective)
 
 @app.route('/greet')
 def greet_person():
