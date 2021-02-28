@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+    <title>Welcome to the Game!</title>
+</head>
+<body>
+
+    <form action="/madlib">
+        <p>
+        Type in a person: 
+        <input type="text" name="person">
+        </p>
+        <p>
+        Type in a color:
+        <input type="checkbox" name="colors" value="purple" required
+        minlength="1" maxlength="1">
+        <label>Purple</label>
+        
+        <input type="checkbox" name="colors" value="red" required
+        minlength="1" maxlength="1">
+        <label>Red</label>
+
+        <input type="checkbox" name="colors" value="blue" required
+        minlength="1" maxlength="1">
+        <label>Blue</label>
+
+        <input type="checkbox" name="colors" value="orange" required
+        minlength="1" maxlength="1">
+        <label>Orange</label>
+        </p>
+        <p>
+        Type in a noun:
+        <input type="text" name="noun">
+        </p>
+        <p>
+        Type in an adjective:
+        <input type="radio" name="adjective" value="spicy">
+        <label>Spicy</label>
+        
+        <input type="radio" name="adjective" value="minty">
+        <label>Minty</label>
+
+        <input type="radio" name="adjective" value="bitter">
+        <label>Bitter</label>
+
+        <input type="radio" name="adjective" value="tangy">
+        <label>Tangy</label>
+        </p>
+        <input type="submit">
+    </form>
+
+</body>
+</html>
